@@ -11,8 +11,8 @@ mixin menu(mainMenu, colorTheme="light")
     .navigation.flex-between.items-center 
         .logo 
             a(href="index.html")
-                img(src="", alt="")
-                span(class=colorTheme) misocial
+                img(src="../../img/logo.png", alt="")
+                span(class=colorTheme) MISOCIAL
         nav.nav.flex-between.items-center
             ul(class=colorTheme)
                 for item in mainMenu 
@@ -23,7 +23,7 @@ mixin menu(mainMenu, colorTheme="light")
 -
     let cardInfo = {
         satelite: {
-            img: "img/sat.png",
+            img: "../../img/satelite.png",
             alt: "description img",
             personal: "personal",
             currency: "$",
@@ -40,11 +40,28 @@ mixin menu(mainMenu, colorTheme="light")
             href: "#",
         },
         mars: {
-            img: "img/mars.png",
+            img: "../../img/mars.png",
             alt: "description img",
             personal: "personal",
             currency: "$",
-            price: "0",
+            price: "29",
+            isMonth: true,
+            description: [
+                "Lorem ipsum dolor sit amet.",
+                "sed do eiusmod tempor incididunt ut.",
+                "Labore et dolore magna aliqua.",
+                "quis nostrud exercitation ullamco laboris.",
+                "Ea commodo consequat.",
+            ],
+            ctaText: "select plan",
+            href: "#",
+        },
+        rocket: {
+            img: "../../img/rocket.png",
+            alt: "description img",
+            personal: "personal",
+            currency: "$",
+            price: "49",
             isMonth: true,
             description: [
                 "Lorem ipsum dolor sit amet.",
@@ -74,3 +91,9 @@ mixin card(oneCard)
                 for stroke in oneCard.description
                     li #{stroke}
             a(href=oneCard.href) #{oneCard.ctaText} 
+
+mixin line(line, text="text")
+    .test.flex
+        span.line
+        p.text_test=text
+        span.line
