@@ -1,0 +1,76 @@
+-
+    let mainMenu = [
+        ['Home', '#'],
+        ['Why MISOCIAL', '#'],
+        ['Features', '#'],
+        ['Articles', '#'],
+        ['Pricing', '#'],
+    ]
+
+mixin menu(mainMenu, colorTheme="light")
+    .navigation.flex-between.items-center 
+        .logo 
+            a(href="index.html")
+                img(src="", alt="")
+                span(class=colorTheme) misocial
+        nav.nav.flex-between.items-center
+            ul(class=colorTheme)
+                for item in mainMenu 
+                    li 
+                        a(href=item[1]) #{item[0]}
+            p(class=colorTheme).cta_empty get started
+
+-
+    let cardInfo = {
+        satelite: {
+            img: "img/sat.png",
+            alt: "description img",
+            personal: "personal",
+            currency: "$",
+            price: "0",
+            isMonth: true,
+            description: [
+                "Lorem ipsum dolor sit amet.",
+                "sed do eiusmod tempor incididunt ut.",
+                "Labore et dolore magna aliqua.",
+                "quis nostrud exercitation ullamco laboris.",
+                "Ea commodo consequat.",
+            ],
+            ctaText: "select plan",
+            href: "#",
+        },
+        mars: {
+            img: "img/mars.png",
+            alt: "description img",
+            personal: "personal",
+            currency: "$",
+            price: "0",
+            isMonth: true,
+            description: [
+                "Lorem ipsum dolor sit amet.",
+                "sed do eiusmod tempor incididunt ut.",
+                "Labore et dolore magna aliqua.",
+                "quis nostrud exercitation ullamco laboris.",
+                "Ea commodo consequat.",
+            ],
+            ctaText: "select plan",
+            href: "#",
+        }
+    } 
+
+mixin card(oneCard)
+    figure 
+        figcaption 
+            img(src=oneCard.img, alt=oneCard.alt)
+            p.personal #{oneCard.personal}
+            p.price 
+                span.currency #{oneCard.currency}
+                b #{oneCard.price}
+                if isMonth 
+                    | /month
+                else 
+                    | /year
+            ul.description 
+                for stroke in oneCard.description
+                    li #{stroke}
+            a(href=oneCard.href) #{oneCard.ctaText} 
