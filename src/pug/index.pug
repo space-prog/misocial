@@ -22,8 +22,20 @@ html(lang="en")
                         .arrow_cont
                             img(src="../img/arrow.svg", alt="Arrow").arrow
         main 
-            +card(cardInfo.satelite)
-            +card(cardInfo.mars)
-            +card(cardInfo.rocket)
+            +line(line, text="MISOCIAL", lineclass="purple", textClass="darkText")
+            h2.textCenter Select a Plan
+            p.textCenter.mainP Lorem ipsum dolor sit amet, consectetur adipisicing
+            p.textCenter.mainP.mb100 elit, sed do eiusmod tempor incididunt ut.
+            .flex.center.colGap
+                +card(cardInfo.satelite)
+                +card(cardInfo.mars)
+                +card(cardInfo.rocket)
+            .map 
+                .container_map
+                    +line(line, text="SOCAL MARKETING & ANALYTICS", lineclass="transparent")
+                    h2.textCenter.fff Take control of your data
+                    .buttons.flex.center
+                        a(href="#") GET STARTED
+                        a(href="#") EXPLORE FEATURES
         footer 
             +menu(mainMenu, "dark")

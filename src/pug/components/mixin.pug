@@ -78,22 +78,24 @@ mixin menu(mainMenu, colorTheme="light")
 mixin card(oneCard)
     figure 
         figcaption 
-            img(src=oneCard.img, alt=oneCard.alt)
-            p.personal #{oneCard.personal}
-            p.price 
-                span.currency #{oneCard.currency}
+            .flex.center 
+                img(src=oneCard.img, alt=oneCard.alt).figImg
+            p.personal.textCenter.personal #{oneCard.personal}
+            p.price.textCenter
+                sup 
+                    span.currency #{oneCard.currency}
                 b #{oneCard.price}
                 if isMonth 
-                    | /month
+                    span.monthYear /month
                 else 
-                    | /year
+                    span.monthYear /year
             ul.description 
                 for stroke in oneCard.description
                     li #{stroke}
             a(href=oneCard.href) #{oneCard.ctaText} 
 
-mixin line(line, text="text")
+mixin line(line, text="text", lineClass="line", textClass="white")
     .test.flex.center
-        span.line
-        b.text_test=text
-        span.line
+        span(class=lineClass).line
+        b(class=textClass).text_test=text
+        span(class=lineClass).line
