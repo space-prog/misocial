@@ -14,7 +14,7 @@ nav.nav.flex-between.items-center
         font-weight: 500
         font-family: "Maven Pro"
         li
-            a
+            a.light
                 position: relative
                 color: #fff
                 text-decoration: none
@@ -222,3 +222,34 @@ figcaption
 .buttons
     column-gap: 10px
     padding-bottom: 10%
+
+.logo
+    .dark
+        color: #37374a
+
+.dark.ul
+    li
+        a
+            color: #6a6a77
+            text-decoration: none
+            transition: all .3s ease
+            &:hover
+                color: #756edc
+
+footer
+    padding: 50px 50px 0 50px
+    .navigation
+        margin-bottom: 30px
+    hr
+        background-color: #bdbdc2
+        opacity: 0.2
+    .footerSoc
+        column-gap: 15px
+        i
+            font-size: 16px
+            line-height: 19px
+            opacity: 0.5
+            color: #6a6a77
+    .footerAdv
+        padding: 30px 0
+    

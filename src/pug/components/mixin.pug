@@ -14,10 +14,10 @@ mixin menu(mainMenu, colorTheme="light")
                 img(src="../../img/logo.png", alt="")
                 span(class=colorTheme) MISOCIAL
         nav.nav.flex-between.items-center
-            ul(class=colorTheme)
+            ul(class=colorTheme).ul
                 for item in mainMenu 
                     li 
-                        a(href=item[1]) #{item[0]}
+                        a(class=colorTheme, href=item[1]) #{item[0]}
             p(class=colorTheme).cta_empty get started
 
 -
