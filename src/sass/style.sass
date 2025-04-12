@@ -1,15 +1,19 @@
 @import components/mixin
-    
+
 *
     margin: 0
     padding: 0
 
 html
-    font-size: 0.8px
+    scroll-behavior: smooth
+    font-size: 0.6px
     +media(1024)
-        font-size: 0.9px
+        font-size: 0.75px
     +media(1920)
         font-size: 1px
+
+body
+    font-family: "Maven Pro"
 
 nav.nav.flex-between.items-center
     display: flex
@@ -21,7 +25,6 @@ nav.nav.flex-between.items-center
         font-size: 16rem
         line-height: 19px
         font-weight: 500
-        font-family: "Maven Pro"
         li
             a.light
                 position: relative
@@ -41,9 +44,10 @@ nav.nav.flex-between.items-center
                     left: 0
 
 header
+    +gradient("../img/ewan-robertson-4hH8MJBQYYE-unsplash.jpg")
     // background-color: #ccc
     padding: 50rem
-    background: url("../img/ewan-robertson-4hH8MJBQYYE-unsplash.jpg") center/cover no-repeat
+    // background: url("../img/ewan-robertson-4hH8MJBQYYE-unsplash.jpg") no-repeat center/cover 
     margin-bottom: 120rem
 
 .flex-between
@@ -66,7 +70,6 @@ header
             line-height: 29px
             color: #fff
             font-weight: 700
-            font-family: "Maven Pro"
 
 .line
     display: block
@@ -82,7 +85,6 @@ header
     line-height: 32px
     text-transform: uppercase
     font-weight: 700
-    font-family: "Maven Pro"
 
 .test
     display: flex
@@ -103,7 +105,6 @@ header
         line-height: 72px
         color: #fff
         font-weight: 500
-        font-family: "Maven Pro"
     .adv2
         text-align: center
         p
@@ -111,7 +112,6 @@ header
             line-height: 28px
             color: #fff
             font-weight: 400
-            font-family: "Maven Pro"
             text-align: center
 
 .flex
@@ -149,14 +149,12 @@ h2
     line-height: 72px
     color: #4f4f6f
     font-weight: 500
-    font-family: "Maven Pro"
 
 .mainP
     font-size: 16rem
     line-height: 28px
     color: #9fa4af
     font-weight: 400
-    font-family: "Maven Pro"
 
 .colGap
     margin-bottom: 119rem
@@ -167,8 +165,13 @@ figcaption
     border: 1px solid #d7dbe8
     max-height: 650px
     padding: 68rem
+    text-align: center
+    transition: all .5s ease
+    cursor: pointer
+    &:hover
+        box-shadow: 0 0 35px 35px rgba(204,204,223,0.71)
     img
-        min-height: 110px
+        min-height: 118px
         min-width: 120px
     b
         font-size: 60rem
@@ -176,7 +179,6 @@ figcaption
         line-height: 72px
         color: #4f4f6f
         font-weight: 500
-        font-family: "Maven Pro"
     sup
         position: relative
         font-size: 16rem
@@ -184,7 +186,6 @@ figcaption
         line-height: 51px
         color: #4f4f6f
         font-weight: 500
-        font-family: "Maven Pro"
 
     ul
         li
@@ -193,7 +194,6 @@ figcaption
             line-height: 28px
             color: #9fa4af
             font-weight: 400
-            font-family: "Maven Pro"
             text-align: center
     .monthYear
         font-size: 18rem
@@ -201,22 +201,24 @@ figcaption
         line-height: 72px
         color: #4f4f6f
         font-weight: 500
-        font-family: "Maven Pro"
+    a
+        +btn($empty:false)
 
 .personal
+    padding-top: 53px
     font-size: 14rem
     letter-spacing: 1px
     line-height: 32px
     text-transform: uppercase
     color: #9fa4af
     font-weight: 700
-    font-family: "Maven Pro"
 
 .mb100
     padding-bottom: 100rem
 
 .map
     background: url(../img/map.png) center/cover no-repeat
+    +gradient("../img/map.png")
 
 .transparent
     background-color: transparent
@@ -230,6 +232,8 @@ figcaption
 .buttons
     column-gap: 10rem
     padding-bottom: 10%
+    a
+        +btn($fixed:true)
 
 .logo
     .dark
@@ -267,7 +271,22 @@ footer
 .wrapperCard
     width: 70%
     margin: 0 auto
+    padding-bottom: 119rem
 
 .currency
     position: absolute
     right: 8px
+
+.light.cta_empty
+    +btn($fixed:false)
+
+.dark.cta_empty
+    +btn($fixed:false, $empty: true)
+
+.description
+    margin-bottom: 50rem
+
+.navigation
+    display: block
+    +media(768)
+        display: flex

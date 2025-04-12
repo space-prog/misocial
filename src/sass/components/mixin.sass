@@ -1,3 +1,47 @@
 =media ($size)
-    @media screen and (min-width:#{$size}px) 
+    @media screen and (min-width:#{$size}px)
         @content
+
+=btn($fixed: true, $empty: false)
+    display: inline-block
+    text-align: center
+    font-size: 12px
+    letter-spacing: 1px
+    line-height: 2.6em
+    text-transform: uppercase
+    color: #fff
+    font-weight: 700
+    text-decoration: none
+    border-radius: 25px
+    transition: all .3s ease
+    cursor: pointer
+    color: #fff
+    padding: 11rem 0
+    @if $fixed
+        width: 190rem
+        filter: drop-shadow(0 0 10.5px rgba(204,204,223,0.5))
+        background-color: #ffffff
+        border: 1px solid #d7dbe8
+        color: #c2c9db
+        padding: 11rem 50rem
+        &:hover
+            background-color: #6e45e2
+            border-color: #6e45e2
+            color: #fff
+    @else
+        width: 150rem
+        background-color: rgba(110,69,226,0)
+        border: 1px solid #ffffff
+        padding: 11rem 30rem
+    @if $empty != false
+        background-color: #6e45e2
+        border: 1px solid #d7dbe8
+        padding: 11rem 30rem
+        &:hover
+            color: #6e45e2
+            border-color: #6e45e2
+            background-color: transparent
+
+=gradient($url)
+    background-color: #6e45e2
+    background: linear-gradient(-60deg, rgba(#87d3cd, 0.75) 0%, rgba(#6d45e1, 0.75) 100%), url(#{$url}) no-repeat center/cover
