@@ -2,13 +2,14 @@ doctype html
 html(lang="en")
     head
         meta(charset="UTF-8")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=2.0, minimum-scale=1.0")
         link(rel="stylesheet", href="css/style.css")
+        link(rel="shortcut icon", href="img/logo.png", type="png")
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400..900&display=swap" rel="stylesheet">
         link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css")
-        title Document
+        title Misocial | Офіційний сайт компанії
     body 
         include components/mixin 
         header 
@@ -19,15 +20,16 @@ html(lang="en")
                     h1.flex Pricing Table
                     p Lorem ipsum dolor sit amet, consectetur adipisicing
                     p.mb elit, sed do eiusmod tempor incididunt ut.
-                    .flex.center 
-                        .arrow_cont
-                            img(src="https://raw.githubusercontent.com/space-prog/misocial/0a94c4473d775444b35ac99106ea39e8bd70dd46/src/img/arrow.svg", alt="Arrow").arrow
-        main 
+                    a(href="#scroll")
+                        .flex.center 
+                            .arrow_cont
+                                img(src="https://raw.githubusercontent.com/space-prog/misocial/0a94c4473d775444b35ac99106ea39e8bd70dd46/src/img/arrow.svg", alt="Arrow").arrow
+        main#scroll
             +line(line, text="MISOCIAL", lineclass="purple", textClass="darkText")
             h2.textCenter Select a Plan
             p.textCenter.mainP Lorem ipsum dolor sit amet, consectetur adipisicing
             p.textCenter.mainP.mb100 elit, sed do eiusmod tempor incididunt ut.
-            .flex.center.colGap
+            .flex.center.colGap.wrapperCard
                 +card(cardInfo.satelite)
                 +card(cardInfo.mars)
                 +card(cardInfo.rocket)

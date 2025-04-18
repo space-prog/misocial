@@ -18,7 +18,7 @@ mixin menu(mainMenu, colorTheme="light")
                 for item in mainMenu 
                     li 
                         a(class=colorTheme, href=item[1]) #{item[0]}
-            p(class=colorTheme).cta_empty get started
+            a(class=colorTheme).cta_empty get started
 
 -
     let cardInfo = {

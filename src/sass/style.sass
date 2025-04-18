@@ -1,18 +1,30 @@
+@import components/mixin
+
 *
     margin: 0
     padding: 0
 
+html
+    scroll-behavior: smooth
+    font-size: 0.6px
+    +media(1024)
+        font-size: 0.75px
+    +media(1920)
+        font-size: 1px
+
+body
+    font-family: "Maven Pro"
+
 nav.nav.flex-between.items-center
     display: flex
-    column-gap: 40px
+    column-gap: 40rem
     ul
         display: flex
-        column-gap: 60px
+        column-gap: 60rem
         list-style: none
-        font-size: 16px
+        font-size: 16rem
         line-height: 19px
         font-weight: 500
-        font-family: "Maven Pro"
         li
             a.light
                 position: relative
@@ -32,10 +44,11 @@ nav.nav.flex-between.items-center
                     left: 0
 
 header
+    +gradient("../img/ewan-robertson-4hH8MJBQYYE-unsplash.jpg")
     // background-color: #ccc
-    padding: 50px
-    background: url("../img/ewan-robertson-4hH8MJBQYYE-unsplash.jpg") center/cover no-repeat
-    margin-bottom: 120px
+    padding: 50rem
+    // background: url("../img/ewan-robertson-4hH8MJBQYYE-unsplash.jpg") no-repeat center/cover 
+    margin-bottom: 120rem
 
 .flex-between
     display: flex
@@ -50,30 +63,28 @@ header
         align-items: center
         text-decoration: none
         img
-            padding-right: 17px
+            padding-right: 17rem
         span
-            font-size: 30px
+            font-size: 30rem
             letter-spacing: 6px
             line-height: 29px
             color: #fff
             font-weight: 700
-            font-family: "Maven Pro"
 
 .line
     display: block
     height: 1px
     width: 24px
     background-color: #fff
-    margin: 0 15px
+    margin: 0 15rem
 
 .text_test
     color: #fff
-    font-size: 14px
+    font-size: 14rem
     letter-spacing: 1px
     line-height: 32px
     text-transform: uppercase
     font-weight: 700
-    font-family: "Maven Pro"
 
 .test
     display: flex
@@ -87,22 +98,20 @@ header
         display: flex
         justify-content: center
         width: 100%
-        padding-top: 40px
-        padding-bottom: 22px
-        font-size: 86px
+        padding-top: 40rem
+        padding-bottom: 22rem
+        font-size: 86rem
         letter-spacing: -3px
         line-height: 72px
         color: #fff
         font-weight: 500
-        font-family: "Maven Pro"
     .adv2
         text-align: center
         p
-            font-size: 16px
+            font-size: 16rem
             line-height: 28px
             color: #fff
             font-weight: 400
-            font-family: "Maven Pro"
             text-align: center
 
 .flex
@@ -134,81 +143,82 @@ header
     text-align: center
 
 h2
-    padding-bottom: 25px
-    font-size: 60px
+    padding-bottom: 25rem
+    font-size: 60rem
     letter-spacing: -2px
     line-height: 72px
     color: #4f4f6f
     font-weight: 500
-    font-family: "Maven Pro"
 
 .mainP
-    font-size: 16px
+    font-size: 16rem
     line-height: 28px
     color: #9fa4af
     font-weight: 400
-    font-family: "Maven Pro"
 
 .colGap
-    margin-bottom: 119px
-    column-gap: 50px
+    margin-bottom: 119rem
+    column-gap: 50rem
 
 figcaption
-    border-radius: 30px
+    border-radius: 30rem
     border: 1px solid #d7dbe8
-    padding: 68px
+    max-height: 650px
+    padding: 68rem
+    text-align: center
+    transition: all .5s ease
+    cursor: pointer
+    &:hover
+        box-shadow: 0 0 35px 35px rgba(204,204,223,0.71)
     img
-        min-height: 108px
+        min-height: 118px
         min-width: 120px
     b
-        font-size: 60px
+        font-size: 60rem
         letter-spacing: -2px
         line-height: 72px
         color: #4f4f6f
         font-weight: 500
-        font-family: "Maven Pro"
     sup
-        font-size: 16px
+        position: relative
+        font-size: 16rem
         letter-spacing: -1px
         line-height: 51px
         color: #4f4f6f
         font-weight: 500
-        font-family: "Maven Pro"
 
     ul
         li
             list-style-type: none
-            font-size: 16px
+            font-size: 16rem
             line-height: 28px
             color: #9fa4af
             font-weight: 400
-            font-family: "Maven Pro"
             text-align: center
     .monthYear
-        font-size: 18px
+        font-size: 18rem
         letter-spacing: -1px
         line-height: 72px
         color: #4f4f6f
         font-weight: 500
-        font-family: "Maven Pro"
-
-.figImg
-    padding-bottom: 60px
+    a
+        +btn($empty:false)
 
 .personal
-    font-size: 14px
+    padding-top: 53px
+    font-size: 14rem
     letter-spacing: 1px
     line-height: 32px
     text-transform: uppercase
     color: #9fa4af
     font-weight: 700
-    font-family: "Maven Pro"
 
 .mb100
-    padding-bottom: 100px
+    padding-bottom: 100rem
 
 .map
     background: url(../img/map.png) center/cover no-repeat
+    +gradient("../img/map.png")
 
 .transparent
     background-color: transparent
@@ -220,8 +230,10 @@ figcaption
     color: #fff
 
 .buttons
-    column-gap: 10px
+    column-gap: 10rem
     padding-bottom: 10%
+    a
+        +btn($fixed:true)
 
 .logo
     .dark
@@ -237,16 +249,16 @@ figcaption
                 color: #756edc
 
 footer
-    padding: 50px 50px 0 50px
+    padding: 50rem 50rem 0 50rem
     .navigation
-        margin-bottom: 30px
+        margin-bottom: 30rem
     hr
         background-color: #bdbdc2
         opacity: 0.2
     .footerSoc
-        column-gap: 15px
+        column-gap: 15rem
         i
-            font-size: 16px
+            font-size: 16rem
             line-height: 19px
             opacity: 0.5
             color: #6a6a77
@@ -254,5 +266,27 @@ footer
             &:hover
                 color: #6e45e2
     .footerAdv
-        padding: 30px 0
-    
+        padding: 30rem 0
+
+.wrapperCard
+    width: 70%
+    margin: 0 auto
+    padding-bottom: 119rem
+
+.currency
+    position: absolute
+    right: 8px
+
+.light.cta_empty
+    +btn($fixed:false)
+
+.dark.cta_empty
+    +btn($fixed:false, $empty: true)
+
+.description
+    margin-bottom: 50rem
+
+.navigation
+    display: block
+    +media(768)
+        display: flex
