@@ -290,3 +290,58 @@ footer
     display: block
     +media(768)
         display: flex
+
+
+//burger
+
+.burger 
+    padding: 16rem 0 
+    width: 50rem 
+    height: 100% 
+    cursor: pointer 
+    &:hover 
+        & > .b1 
+            transform: translateX(20rem) 
+        & > .b2 
+            transform: translateX(10rem) 
+.bord 
+    display: block 
+    margin: 4rem 
+    width: 30rem 
+    height: 5rem 
+    border-radius: 2rem 
+    background-color: #fff 
+    transition: all 1s ease 
+.b1 
+    width: 20rem 
+.b2 
+    width: 30rem 
+.b3 
+    width: 40rem 
+    top: 10rem 
+.menu-burger 
+    height: 100% 
+    width: 80% 
+    padding: 10rem 15rem 
+    position: fixed 
+    display: block 
+    top: 0 
+    left: -100% 
+    z-index: 11 
+    background-color: #1f1f56 
+    transition: all .5s ease 
+    & > li 
+        padding: 16rem 0 
+        & > a 
+            font-size: 40px 
+.submenu2 
+    li 
+        padding: 5px 0 
+.cancel 
+    position: absolute 
+    top: 10rem 
+    right: 10rem 
+    cursor: pointer 
+    svg 
+        width: 20rem 
+        height: 20rem 

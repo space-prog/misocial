@@ -14,7 +14,11 @@ mixin menu(mainMenu, colorTheme="light")
                 img(src="https://github.com/space-prog/misocial/blob/master/src/img/logo.png?raw=true", alt="")
                 span(class=colorTheme) MISOCIAL
         nav.nav.flex-between.items-center
-            ul(class=colorTheme).ul
+            .burger 
+                span.bord.b1 
+                span.bord.b2 
+                span.bord.b3 
+            ul(class=colorTheme).ul.menu-burger
                 for item in mainMenu 
                     li 
                         a(class=colorTheme, href=item[1]) #{item[0]}
