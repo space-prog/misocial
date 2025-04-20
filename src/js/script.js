@@ -9,6 +9,11 @@ burger.addEventListener("click", function () {
     dark.style.display = "block"
 })
 
+dark.addEventListener("click", function() {
+    menu.style.left = "-100%";
+    dark.style.display = "none"
+})
+
 function cancelBurger() {
     menu.style.left = "-100%";
     dark.style.display = "none"

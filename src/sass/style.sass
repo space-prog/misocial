@@ -19,12 +19,14 @@ nav.nav.flex-between.items-center
     display: flex
     column-gap: 40rem
     ul
-        display: flex
+        display: block
         column-gap: 60rem
         list-style: none
         font-size: 16rem
         line-height: 19px
         font-weight: 500
+        +media(800)
+            display: flex
         li
             a.light
                 position: relative
@@ -287,14 +289,14 @@ footer
     margin-bottom: 50rem
 
 .navigation
-    display: block
+    display: flex
     +media(768)
         display: flex
 
 
 //burger
 
-.burger 
+.burger.light
     padding: 16rem 0 
     width: 50rem 
     height: 100% 
@@ -304,7 +306,9 @@ footer
             transform: translateX(20rem) 
         & > .b2 
             transform: translateX(10rem) 
-.bord 
+    +media(800)
+        display: none
+.bord
     display: block 
     margin: 4rem 
     width: 30rem 
@@ -319,7 +323,7 @@ footer
 .b3 
     width: 40rem 
     top: 10rem 
-.menu-burger 
+.menu-burger.light
     height: 100% 
     width: 80% 
     padding: 10rem 15rem 
@@ -328,16 +332,27 @@ footer
     top: 0 
     left: -100% 
     z-index: 11 
-    background-color: #1f1f56 
     transition: all .5s ease 
+    background: #fd8300
     & > li 
         padding: 16rem 0 
         & > a 
-            font-size: 40px 
+            font-size: 40rem
+            +media(800)
+                font-size: 20rem
+    +media(800)
+        padding: 0 0
+        /* height: auto; */
+        width: 100%
+        position: static
+        display: block
+        justify-content: space-between
+        column-gap: 20rem
+        background: transparent
 .submenu2 
     li 
         padding: 5px 0 
-.cancel 
+.cancel.light
     position: absolute 
     top: 10rem 
     right: 10rem 
@@ -345,6 +360,9 @@ footer
     svg 
         width: 20rem 
         height: 20rem 
+        fill: #fff
+    +media(800)
+        display: none
 
 .dark-bgc
     display: none
