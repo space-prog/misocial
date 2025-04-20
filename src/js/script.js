@@ -1,6 +1,7 @@
 const burger = document.querySelector(".burger"),
     menu = document.querySelector(".menu-burger"),
-    cancel = document.querySelector(".cancel")
+    cancel = document.querySelector(".cancel"),
+    dark = document.querySelector(".dark-bgc")
 
 
 burger.addEventListener("click", function () {
