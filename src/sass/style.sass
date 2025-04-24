@@ -23,27 +23,29 @@ nav.nav.flex-between.items-center
         column-gap: 60rem
         list-style: none
         font-size: 16rem
-        line-height: 19px
+        line-height: 1.1em
         font-weight: 500
         +media(800)
             display: flex
-        li
-            a.light
-                position: relative
-                color: #fff
-                text-decoration: none
-                &::after
-                    content: ""
-                    position: absolute
-                    left: 50%
-                    bottom: -5px
-                    width: 0
-                    height: 2px
-                    background-color: #fff
-                    transition: width 0.3s ease, left 0.3s ease
-                &:hover::after
-                    width: 100%
-                    left: 0
+    ul.dark
+        display: flex
+    li
+        a.light
+            position: relative
+            color: #fff
+            text-decoration: none
+            &::after
+                content: ""
+                position: absolute
+                left: 50%
+                bottom: -5px
+                width: 0
+                height: 2px
+                background-color: #fff
+                transition: width 0.3s ease, left 0.3s ease
+            &:hover::after
+                width: 100%
+                left: 0
 
 header
     +gradient("../img/ewan-robertson-4hH8MJBQYYE-unsplash.jpg")
@@ -69,7 +71,7 @@ header
         span
             font-size: 30rem
             letter-spacing: 6px
-            line-height: 29px
+            line-height: 0.9em
             color: #fff
             font-weight: 700
 
@@ -84,7 +86,7 @@ header
     color: #fff
     font-size: 14rem
     letter-spacing: 1px
-    line-height: 32px
+    line-height: 2.2em
     text-transform: uppercase
     font-weight: 700
 
@@ -104,14 +106,14 @@ header
         padding-bottom: 22rem
         font-size: 86rem
         letter-spacing: -3px
-        line-height: 72px
+        line-height: 0.8em
         color: #fff
         font-weight: 500
     .adv2
         text-align: center
         p
             font-size: 16rem
-            line-height: 28px
+            line-height: 1.75em
             color: #fff
             font-weight: 400
             text-align: center
@@ -148,13 +150,13 @@ h2
     padding-bottom: 25rem
     font-size: 60rem
     letter-spacing: -2px
-    line-height: 72px
+    line-height: 1.2em
     color: #4f4f6f
     font-weight: 500
 
 .mainP
     font-size: 16rem
-    line-height: 28px
+    line-height: 1.75em
     color: #9fa4af
     font-weight: 400
 
@@ -178,14 +180,14 @@ figcaption
     b
         font-size: 60rem
         letter-spacing: -2px
-        line-height: 72px
+        line-height: 1.2em
         color: #4f4f6f
         font-weight: 500
     sup
         position: relative
         font-size: 16rem
         letter-spacing: -1px
-        line-height: 51px
+        line-height: 3.1em
         color: #4f4f6f
         font-weight: 500
 
@@ -193,24 +195,25 @@ figcaption
         li
             list-style-type: none
             font-size: 16rem
-            line-height: 28px
+            line-height: 1.75em
             color: #9fa4af
             font-weight: 400
             text-align: center
     .monthYear
         font-size: 18rem
         letter-spacing: -1px
-        line-height: 72px
+        line-height: 4em
         color: #4f4f6f
         font-weight: 500
     a
         +btn($empty:false)
+        white-space: nowrap
 
 .personal
     padding-top: 53px
     font-size: 14rem
     letter-spacing: 1px
-    line-height: 32px
+    line-height: 2.2em
     text-transform: uppercase
     color: #9fa4af
     font-weight: 700
@@ -261,7 +264,7 @@ footer
         column-gap: 15rem
         i
             font-size: 16rem
-            line-height: 19px
+            line-height: 1.1em
             opacity: 0.5
             color: #6a6a77
             transition: all .3s ease
@@ -274,6 +277,9 @@ footer
     width: 70%
     margin: 0 auto
     padding-bottom: 119rem
+    display: block
+    +media(870)
+        display: flex
 
 .currency
     position: absolute
@@ -363,6 +369,9 @@ footer
         fill: #fff
     +media(800)
         display: none
+
+.cancel.dark
+    display: none
 
 .dark-bgc
     display: none

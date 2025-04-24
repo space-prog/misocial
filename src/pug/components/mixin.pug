@@ -99,7 +99,8 @@ mixin card(oneCard)
             ul.description 
                 for stroke in oneCard.description
                     li #{stroke}
-            a(href=oneCard.href) #{oneCard.ctaText} 
+            .flex.center
+                a(href=oneCard.href) #{oneCard.ctaText} 
 
 mixin line(line, text="text", lineClass="line", textClass="white")
     .test.flex.center
