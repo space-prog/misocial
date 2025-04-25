@@ -28,7 +28,9 @@ nav.nav.flex-between.items-center
         +media(800)
             display: flex
     ul.dark
-        display: flex
+        +media(780)
+            display: flex
+        display: block
     li
         a.light
             position: relative
@@ -106,7 +108,7 @@ header
         padding-bottom: 22rem
         font-size: 86rem
         letter-spacing: -3px
-        line-height: 0.8em
+        line-height: 1em
         color: #fff
         font-weight: 500
     .adv2
@@ -135,7 +137,10 @@ header
     filter: drop-shadow(0 0 10.5px rgba(204,204,223,0.5))
 
 .mb
-    margin-bottom: 35%
+    margin-bottom: 20%
+    +media(700)
+        margin-bottom: 35%
+
 
 .purple
     background-color: #6e45e2
@@ -168,7 +173,9 @@ figcaption
     border-radius: 30rem
     border: 1px solid #d7dbe8
     max-height: 650px
-    padding: 68rem
+    +media(870)
+        padding: 68rem
+    padding: 45rem
     text-align: center
     transition: all .5s ease
     cursor: pointer
@@ -209,8 +216,15 @@ figcaption
         +btn($empty:false)
         white-space: nowrap
 
+figure
+    +media(870)
+        margin-bottom: 0
+    margin-bottom: 20px
+
 .personal
-    padding-top: 53px
+    +media(870)
+        padding-top: 53px
+    padding-top: 23px
     font-size: 14rem
     letter-spacing: 1px
     line-height: 2.2em
@@ -219,7 +233,9 @@ figcaption
     font-weight: 700
 
 .mb100
-    padding-bottom: 100rem
+    +media(870)
+        padding-bottom: 100rem
+    padding-bottom: 50rem
 
 .map
     background: url(../img/map.png) center/cover no-repeat
@@ -276,10 +292,11 @@ footer
 .wrapperCard
     width: 70%
     margin: 0 auto
-    padding-bottom: 119rem
     display: block
+    padding-bottom: 60rem
     +media(870)
         display: flex
+        padding-bottom: 119rem
 
 .currency
     position: absolute
@@ -292,7 +309,9 @@ footer
     +btn($fixed:false, $empty: true)
 
 .description
-    margin-bottom: 50rem
+    +media(870)
+        margin-bottom: 50rem
+    margin-bottom: 30rem
 
 .navigation
     display: flex
@@ -301,6 +320,9 @@ footer
 
 
 //burger
+
+.burger.dark
+    display: none
 
 .burger.light
     padding: 16rem 0 
@@ -383,3 +405,21 @@ footer
     background-color: rgba(0, 0, 0, 0.3)
     backdrop-filter: blur(4rem)
     z-index: 10
+
+footer
+    .navigation
+        display: block
+        +media(780)
+            display: flex
+    .nav.flex-between.items-center
+        justify-content: center
+    .logo
+        display: flex
+        justify-content: center
+        padding-bottom: 30rem
+        
+.menu-burger.dark
+    text-align: center
+    li
+        font-size: 25rem
+        padding-bottom: 10px
