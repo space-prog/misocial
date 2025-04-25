@@ -25,12 +25,13 @@ nav.nav.flex-between.items-center
         font-size: 16rem
         line-height: 1.1em
         font-weight: 500
-        +media(800)
+        +media(820)
             display: flex
+            align-items: center
     ul.dark
         +media(780)
             display: flex
-        display: block
+        display: block         
     li
         a.light
             position: relative
@@ -246,6 +247,13 @@ figure
 
 .container_map
     padding-top: 8%
+    .buttons
+        a
+            line-height: 1.5em
+            display: flex
+            align-items: center
+            justify-content: center
+            
 
 .fff
     color: #fff
@@ -255,6 +263,7 @@ figure
     padding-bottom: 10%
     a
         +btn($fixed:true)
+        
 
 .logo
     .dark
@@ -334,7 +343,7 @@ footer
             transform: translateX(20rem) 
         & > .b2 
             transform: translateX(10rem) 
-    +media(800)
+    +media(820)
         display: none
 .bord
     display: block 
@@ -366,9 +375,9 @@ footer
         padding: 16rem 0 
         & > a 
             font-size: 40rem
-            +media(800)
+            +media(820)
                 font-size: 20rem
-    +media(800)
+    +media(820)
         padding: 0 0
         /* height: auto; */
         width: 100%
@@ -389,7 +398,7 @@ footer
         width: 20rem 
         height: 20rem 
         fill: #fff
-    +media(800)
+    +media(820)
         display: none
 
 .cancel.dark
@@ -409,7 +418,7 @@ footer
 footer
     .navigation
         display: block
-        +media(780)
+        +media(870)
             display: flex
     .nav.flex-between.items-center
         justify-content: center
@@ -423,3 +432,6 @@ footer
     li
         font-size: 25rem
         padding-bottom: 10px
+        &:nth-child(6)
+            padding-bottom: 50rem
+            
