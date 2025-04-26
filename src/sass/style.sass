@@ -25,9 +25,14 @@ nav.nav.flex-between.items-center
         font-size: 16rem
         line-height: 1.1em
         font-weight: 500
+        padding-top: 70px
+        padding-bottom: 30px
         +media(820)
             display: flex
             align-items: center
+            padding-top: 0
+            padding-bottom: 0
+
     ul.dark
         +media(700)
             display: flex
@@ -98,6 +103,7 @@ header
 .test
     display: flex
     align-items: center
+    padding-top: 30px
 
 .adv
     display: flex
@@ -250,11 +256,14 @@ figure
 .container_map
     padding-top: 8%
     .buttons
+        flex-wrap: wrap
+        row-gap: 10px
         a
             line-height: 1.5em
             display: flex
             align-items: center
             justify-content: center
+
             
 
 .fff
@@ -270,6 +279,14 @@ figure
 .logo
     .dark
         color: #37374a
+
+.light.ul
+    li
+        font-size: 30rem
+        padding: 10px
+        +media(820)
+            font-size: 20rem
+            padding: 0
 
 .dark.ul
     li
@@ -363,8 +380,8 @@ footer
     width: 40rem 
     top: 10rem 
 .menu-burger.light
-    height: 100% 
-    width: 80% 
+    height: 100vh
+    width: 70% 
     padding: 10rem 15rem 
     position: fixed 
     display: block 
@@ -372,7 +389,14 @@ footer
     left: -100% 
     z-index: 11 
     transition: all .5s ease 
-    background: #fd8300
+    background: rgba(111, 0, 255, 0.6)
+    backdrop-filter: blur(4px)
+    +media(820)
+        background: transparent
+        backdrop-filter: blur(0)
+
+    +media(820)
+        height: 100%
     & > li 
         padding: 16rem 0 
         & > a 
@@ -384,7 +408,7 @@ footer
         /* height: auto; */
         width: 100%
         position: static
-        display: block
+        display: flex
         justify-content: space-between
         column-gap: 20rem
         background: transparent
