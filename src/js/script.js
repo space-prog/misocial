@@ -19,3 +19,13 @@ function cancelBurger() {
     dark.style.display = "none"
 }
 cancel.addEventListener("click", cancelBurger)
+
+const header = document.querySelector(".fixed-navigation")
+console.log(header)
+window.addEventListener("scroll", function() {
+    if (window.scrollY > 0) {
+        header.classList.add("bg-fixed")
+    } else {
+        header.classList.remove("bg-fixed")
+    }
+})
