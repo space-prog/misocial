@@ -29,9 +29,10 @@ nav.nav.flex-between.items-center
             display: flex
             align-items: center
     ul.dark
-        +media(780)
+        +media(700)
             display: flex
-        display: block         
+            align-items: center
+        display: none
     li
         a.light
             position: relative
@@ -56,6 +57,7 @@ header
     padding: 50rem
     // background: url("../img/ewan-robertson-4hH8MJBQYYE-unsplash.jpg") no-repeat center/cover 
     margin-bottom: 120rem
+    position: relative
 
 .flex-between
     display: flex
@@ -301,10 +303,10 @@ footer
 .wrapperCard
     width: 70%
     margin: 0 auto
-    display: block
+    display: grid
+    grid-template-columns: repeat(auto-fit, minmax(350rem, 1fr))
     padding-bottom: 60rem
     +media(870)
-        display: flex
         padding-bottom: 119rem
 
 .currency
@@ -431,7 +433,10 @@ footer
     text-align: center
     li
         font-size: 25rem
-        padding-bottom: 10px
-        &:nth-child(6)
-            padding-bottom: 50rem
-            
+
+.fixed-navigation
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    padding: 50rem
