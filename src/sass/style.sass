@@ -11,6 +11,8 @@ html
         font-size: 0.75px
     +media(1920)
         font-size: 1px
+    +media(2200)
+        font-size: 1.5px
 
 body
     font-family: "Maven Pro"
@@ -143,7 +145,10 @@ header
     justify-content: center
     align-items: center
     border-radius: 50%
-    filter: drop-shadow(0 0 10.5px rgba(204,204,223,0.5))
+    box-shadow: 0 0 5px 5px rgba(204,204,223,0.5)
+    transition: all .4s ease
+    &:hover
+        box-shadow: 0px 0px 5px 15px rgba(204,204,223,0.8)
 
 .mb
     margin-bottom: 20%
@@ -176,7 +181,7 @@ h2
 
 .colGap
     margin-bottom: 119rem
-    column-gap: 50rem
+    gap: 50rem
 
 figcaption
     border-radius: 30rem
@@ -225,6 +230,8 @@ figcaption
         +btn($empty:false)
         +media(400)
             width: 150px
+        +media(2000)
+            border-radius: 50px
         white-space: nowrap
 
 figure
@@ -265,6 +272,9 @@ figure
             display: flex
             align-items: center
             justify-content: center
+            +media(2000)
+                border-radius: 50px
+                height: 20px
 
             
 
@@ -312,14 +322,15 @@ footer
             font-size: 16rem
             line-height: 1.1em
             transition: all .3s ease
-            img
+            svg
                 fill: #6a6a77
                 opacity: 0.5
-                height: 10px
+                height: 10rem
+                &:hover
+                    fill: #6e45e2
                 +media(870)
-                    height: 12px
-            &:hover
-                fill: #6e45e2
+                    height: 12rem
+            
     .footerAdv
         padding: 30rem 0
 
@@ -338,9 +349,17 @@ footer
 
 .light.cta_empty
     +btn($fixed:false)
+    &:hover
+        background: #fff
+        color: #000
+    +media(2000)
+        border-radius: 50px
+        padding: 30px 50px
 
 .dark.cta_empty
     +btn($fixed:false, $empty: true)
+    +media(2000)
+        border-radius: 50px
 
 .description
     +media(870)
