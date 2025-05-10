@@ -57,7 +57,7 @@ nav.nav.flex-between.items-center
                 left: 0
 
 header
-    +gradient("../img/ewan-robertson-4hH8MJBQYYE-unsplash.jpg")
+    +gradient("../img/ewan-robertson-4hH8MJBQYYE-unsplash.webp")
     // background-color: #ccc
     padding: 50rem
     // background: url("../img/ewan-robertson-4hH8MJBQYYE-unsplash.jpg") no-repeat center/cover 
@@ -223,6 +223,8 @@ figcaption
         font-weight: 500
     a
         +btn($empty:false)
+        +media(400)
+            width: 150px
         white-space: nowrap
 
 figure
@@ -247,8 +249,8 @@ figure
     padding-bottom: 50rem
 
 .map
-    background: url(../img/map.png) center/cover no-repeat
-    +gradient("../img/map.png")
+    background: url(../img/map.webp) center/cover no-repeat
+    +gradient("../img/map.webp")
 
 .transparent
     background-color: transparent
@@ -306,14 +308,18 @@ footer
         opacity: 0.2
     .footerSoc
         column-gap: 15rem
-        i
+        a
             font-size: 16rem
             line-height: 1.1em
-            opacity: 0.5
-            color: #6a6a77
             transition: all .3s ease
+            img
+                fill: #6a6a77
+                opacity: 0.5
+                height: 10px
+                +media(870)
+                    height: 12px
             &:hover
-                color: #6e45e2
+                fill: #6e45e2
     .footerAdv
         padding: 30rem 0
 
@@ -454,6 +460,8 @@ footer
         padding-bottom: 30rem
         
 .menu-burger.dark
+    display: flex
+    column-gap: 20px
     text-align: center
     li
         font-size: 25rem
@@ -472,4 +480,3 @@ footer
 
 .bg-fixed
     background: rgba(111, 0, 255, 0.6)
-    backdrop-filter: blur(4px)
